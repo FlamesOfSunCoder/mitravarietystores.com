@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra Variety Store</title>
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #E67E22;
+            --accent-color: #3498DB;
+            --light-bg: #F5F6FA;
+            --white: #FFFFFF;
+            --gray: #7F8C8D;
+            --card-shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 4px 6px var(--card-shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero .cta-button {
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .hero .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section styles */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            width: 100px;
+            height: 4px;
+            background: var(--secondary-color);
+            display: block;
+            margin: 0.5rem auto;
+        }
+
+        .list-group {
+            margin: 2rem 0;
+        }
+
+        .list-group h3 {
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .list-group ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+        }
+
+        .list-group ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Mitra Variety Store</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+                <a href="#feedback">Feedback</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Welcome to Mitra Variety Store</h1>
+            <p>Your one-stop destination for all your daily needs</p>
+            <button class="cta-button">Explore Now</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="section-content">
+            At Mitra Variety Store, we pride ourselves on offering a wide range of high-quality products to meet all your daily needs. From kitchen essentials to household items, we are your trusted partner in convenience and affordability.
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="list-group">
+            <h3>Pulses and Dals</h3>
+            <ul>
+                <li>Toor dal – 1 kg</li>
+                <li>Round urad dal – 2 kgs</li>
+                <li>Yellow moong dal – 1 kg</li>
+                <li>Chana dal – 1/2 kg</li>
+                <li>Split urad dal – 1/2 kg</li>
+                <li>Rajma, peas, brown/white chana, green gram dal, Peanuts – 1/4 kg each</li>
+                <li>Fried gram dal / Pottukadalai – 1/4 kg</li>
+                <li>Horsegram, flax seeds – If needed</li>
+            </ul>
+        </div>
+        <div class="list-group">
+            <h3>Spice Powders</h3>
+            <ul>
+                <li>Crystal salt – 1 kg</li>
+                <li>Powder salt – 1 kg</li>
+                <li>Red chili powder – 1/4 kg</li>
+                <li>Dhania powder – 1/4 kg</li>
+                <li>Garam masala powder – 100 gms</li>
+                <li>Chat masala powder – 1 packet small</li>
+                <li>Aamchoor powder – 50 gms</li>
+                <li>Cumin powder – 50 gms</li>
+                <li>Pepper powder – 50 gms</li>
+                <li>Sambar powder, Rasam powder, Vatha kuzhambu powder – If needed</li>
+                <li>Biryani masala powder or curry masala powder – Small packet</li>
+                <li>Instant coffee powder – 100 gms</li>
+                <li>Tea powder – 100 gms</li>
+            </ul>
+        </div>
+        <div class="list-group">
+            <h3>Oils</h3>
+            <ul>
+                <li>Cooking oil – 1-2 lts</li>
+                <li>Gingelly oil/Sesame oil – 1-2 lts</li>
+                <li>Coconut oil – 1/2 lt</li>
+                <li>Ghee or butter – 1/2 kg</li>
+                <li>Olive oil – 1/2 liter</li>
+            </ul>
+        </div>
+        <div class="list-group">
+            <h3>Spices and Nuts</h3>
+            <ul>
+                <li>Mustard seeds – 150 gms</li>
+                <li>Pepper – 100 gms</li>
+                <li>Cumin seeds/jeera – 100 gms</li>
+                <li>Poppy seeds/Khus khus – 100 gms</li>
+                <li>Coriander seeds/Dhania – 200 gms</li>
+                <li>Fennel seeds – 50 gms</li>
+                <li>Fenugreek seeds / Methi seeds – 100 gms</li>
+                <li>Cashew nuts – 50 gms</li>
+                <li>Raisins – 50 gms</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <p>mitravarietystores@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>Phone</h3>
+                <p>07947152139</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Feedback</h2>
+        <div class="feedback-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mitra Variety Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
